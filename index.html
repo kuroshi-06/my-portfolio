@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen.Dev | Computer Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <!-- Hamburger icon for mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="hero" class="card accent-blue">
+            <div class="hero-content">
+                <h1>Personal Information</h1>
+                <p>Hi, I'm Allen — Computer Engineering Student bridging the gap between hardware architecture and software development. Building efficient systems from the silicon up.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="https://github.com/kuroshi-06" target="_blank" class="btn btn-outline">GitHub Profile</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Allen - Profile Picture">
+            </div>
+        </section>
+
+        <section id="projects" class="card accent-green">
+            <h2>Projects Showcase</h2>
+            <div class="projects-grid">
+                <!-- Hardware/IoT Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Prepaid Electricity System</h3>
+                        <p>Built a mini paid electricity system for electricity management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Blynk</span>
+                            <span class="tag">ESP32</span>
+                            <span class="tag">Arduino</span>
+                        </div>
+                        <a href="#" class="project-link">View Repo &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Software Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Student Education Mgmt System</h3>
+                        <p>A web application that helps students share learning materials to others and assess their knowledge to a specific subject.</p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <a href="https://github.com/kuroshi-06/education-management-system" target="_blank" class="project-link">View Repo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Low-Level Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>FPGA Traffic Controller</h3>
+                        <p>Implemented a state machine in Verilog on a Basys 3 board to manage a 4-way intersection with pedestrian crosswalk interrupts.</p>
+                        <div class="project-tags">
+                            <span class="tag">Verilog</span>
+                            <span class="tag">FPGA</span>
+                        </div>
+                        <a href="#" class="project-link">View Docs &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="card accent-yellow">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Low-Level & Hardware</h3>
+                    <ul>
+                        <li>C / C++</li>
+                        <li>Verilog / HDL</li>
+                        <li>Microcontrollers (Arduino, ESP32)</li>
+                        <li>Digital Logic & PCB Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Software & Web</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>HTML5 / CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Systems</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Linux / Bash</li>
+                        <li>Oscilloscopes & Multimeters</li>
+                        <li>Data Mining</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="card accent-orange">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a Computer Engineering student currently studying at Batangas State University. I am passionate about embedded systems, IoT, and full-stack development. I enjoy solving complex problems that require a deep understanding of both how code executes and how hardware processes it. Currently exploring real-time operating systems and web integrations.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="card accent-teal">
+            <h2>Let's Connect</h2>
+            <p>I'm currently looking for software engineering and embedded systems internships.</p>
+            <div class="contact-links">
+                <a href="mailto:reyesallen37@gmail.com" class="btn">Email Me</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Portfolio View Active: [Allen.Dev]</p>
+        <p>&copy; 2026 Allen Reyes. Deployed via Vercel.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
