@@ -1,31 +1,40 @@
-// Mobile Menu Toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const revealElements = document.querySelectorAll(".reveal");
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when a link is clicked
-const links = document.querySelectorAll('.nav-links li a');
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
-
-// Smooth Scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+    // 1. Welcome Splash Screen Transition
+    setTimeout(() => {
+        welcomeScreen.classList.add("hidden");
+        document.body.classList.remove("loading");
         
-        if(targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 70, // Offset for fixed navbar
-                behavior: 'smooth'
-            });
-        }
-    });
+        // Trigger initial visible panes right after welcome screen fades
+        revealOnScroll();
+    }, 2300);
+
+    // 2. Scroll Reveal Observer for All Windows/Panes
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, observerOptions);
+
+    function revealOnScroll() {
+        revealElements.forEach((el) => revealObserver.observe(el));
+    }
+
+    // 3. Mobile Hamburger Menu Toggle
+    if (mobileMenu) {
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
 });
